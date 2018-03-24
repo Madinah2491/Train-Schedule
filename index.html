@@ -1,13 +1,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=Train, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Schedule</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
+    <script src= "stylesheet" type="text/css" href="style.css"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src= "stylesheet" type="texxt/css" href="style.css"></script>
     <script src="javascript/schedule.js"></script>
-    <script src="https://code.jquery.com/jquery.js"></script>
 
 </head>
 
@@ -20,9 +21,65 @@
         <div class= "row">
             <div class = "col-lg-12">
                 <div class = "panel panel-primary">
-                    <h2 class= "panel-heading"
-                </div>
+                    <div class="panel-heading">
+                    <h2 class= "panel-title">Current Train Schedule</h2>
+                    </div>
+
+                    <table style="width:100%">
+                        <tr>
+                          <th>Train name</th>
+                          <th>Destination</th> 
+                          <th>Frequency (min)</th>
+                          <th>Next Arrival</th>
+                          <th>Minutes Away</th>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td> 
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td> 
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                    </table>
+                    </div>
             </div>
+        <div class= "row">
+            <div class = "col-lg-12">
+            <div class = "panel panel-primary">
+                <div class="panel-heading">
+
+                <form>
+                    <h3 class= "panel-title">Current Train Schedule</h3>
+                    </div>
+                    <div class="form-group">
+                        <label for="train-name">Train Name</label>
+                        
+                        <input type="password" id="inputPassword4" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+                        <small id="passwordHelpInline" class="text-muted">
+                        </small>
+                        //<label for="train-name">Train Name
+                                <input class="form-control" type="text" placeholder="Default input">//
+                    </div>
+                    <div class="form-group">
+                        <label for="train-name">Destination</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="train-name">First Train Time(Military Time)</label>
+                    </div>                        
+                    <div class="form-group">
+                        <label for="train-name">Frequency (min)</label>
+                    </div>
+
+                </form>
+            </div>
+
         </div>
 
     </div>
