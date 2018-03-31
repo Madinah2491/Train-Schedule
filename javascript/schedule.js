@@ -31,18 +31,16 @@ $(document).ready(function(){
   //grabs everything added and puts it on the page w/out refreshing
   database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 
-  //makes appropriate values appear in proper places in table
-  $("#trainsched > tbody").append("<tr><td>"+ childSnapshot.val().trainName + "</td><td>" + childSnapshot.val().destination
-   + "</td><td>"+ childSnapshot.val().nextarrival + "</td><td>"+ childSnapshot.val().Frequency + "</td></tr>");
-
-   })
-
   // //time/momentjs stuff//  
   // var  = $("#inputfrequency").val().trim();
 
-  var firstTime = $("#inputtraintime").val().trim();
+  var firstTime = childSnapshot.val().nextarrival;
+
+  var Frequency = childSnapshot.val().Frequency;
 
   var currentTime = moment();
+
+  var tMinutesTillTrain = 5;
   console.log("CURRENT TIME: " + moment(currentTime).format());
 
   // First Time 
@@ -64,5 +62,11 @@ $(document).ready(function(){
   // Next Train
   var tnextArrival = moment().add(tMinutesTillTrain, "minutes");
   console.log("ARRIVAL TIME: " + moment(tnextArrival).format("HH:mm"));
+
+    //makes appropriate values appear in proper places in table
+    $("#trainsched > tbody").append("<tr><td>"+ childSnapshot.val().trainName + "</td><td>" + childSnapshot.val().destination
+    + "</td><td>"+ childSnapshot.val().nextarrival + "</td><td>"+ childSnapshot.val().Frequency + "</td></tr>");
+ 
+    })
 
 });
