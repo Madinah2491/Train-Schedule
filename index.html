@@ -27,7 +27,7 @@
                     <h2 class= "panel-title">Current Train Schedule</h2>
                     </div>
 
-                    <table style="width:100%">
+                    <table style="width:100%" id="trainsched">
                         <tr>
                           <th>Train name</th>
                           <th>Destination</th> 
@@ -36,16 +36,30 @@
                           <th>Minutes Away</th>
                         </tr>
                         <tr>
-                          <td></td>
-                          <td></td> 
-                          <td></td>
+                          <td>New Jersey Transit</td>
+                          <td>Philadelphia</td> 
+                          <td>15</td>
                           <td></td>
                           <td></td>
                         </tr>
                         <tr>
+                          <td>New Jersey Transit</td>
+                          <td>Trenton</td> 
+                          <td>25</td>
                           <td></td>
-                          <td></td> 
                           <td></td>
+                        </tr>
+                        <tr>
+                          <td>New Jersey Transit</td>
+                          <td>Absecon</td> 
+                          <td>60</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>New Jersey Transit</td>
+                          <td>Atlantic City</td> 
+                          <td>75</td>
                           <td></td>
                           <td></td>
                         </tr>
@@ -57,31 +71,32 @@
             <div class = "panel panel-primary">
                 <div class="panel-heading">
 
-                <form>
-                    <h3 class= "panel-title">Current Train Schedule</h3>
+                <form id= "adminEntry">
+                    <h3 class= "panel-title">Add Train</h3>
                     </div>
                     <div class="form-group">
                         <label for="train-name">Train Name</label>
-                        
-                        <input type="form-control form-control-sm" id="inputPassword4" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+                        <input type="form-control form-control-sm" id="inputtrainname" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
 
                     </div>
                     <div class="form-group">
                         <label for="train-name">Destination</label>
-                        <input type="form-control form-control-sm" id="inputPassword4" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+                        <input type="form-control form-control-sm" id="inputdestination" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
                     </div>
                     <div class="form-group">
                         <label for="train-name">First Train Time(Military Time)</label>
-                        <input type="form-control form-control-sm" id="inputPassword4" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+                        <input type="form-control form-control-sm" id="inputtraintime" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
 
                     </div>                        
                     <div class="form-group">
                         <label for="train-name">Frequency (min)</label>
-                        <input type="form-control form-control-sm" id="inputPassword4" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+                        <input type="form-control form-control-sm" id="inputfrequency" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
 
                     </div>
 
                 </form>
+                <button class="btn btn-primary" id="add-trainEntry-btn">Submit</button>
+
             </div>
 
         </div>
